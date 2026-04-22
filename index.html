@@ -8,16 +8,6 @@
   <style>
     :root {
       --bg: #fafaf8;
-      --surface: #ffffff;<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhoomika Sharma | CS Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --bg: #fafaf8;
       --surface: #ffffff;
       --card: #f5f5f2;
       --accent: #1a1a2e;
@@ -83,7 +73,6 @@
 
     .nav-links a:hover { color: var(--accent); }
 
-    /* LinkedIn & GitHub nav buttons */
     .nav-social {
       display: flex;
       gap: 0.7rem;
@@ -106,35 +95,11 @@
       border: 1px solid transparent;
     }
 
-    .nav-linkedin {
-      background: var(--linkedin);
-      color: #fff;
-    }
-
-    .nav-linkedin:hover {
-      background: #005f91;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(0,119,181,0.28);
-    }
-
-    .nav-github {
-      background: transparent;
-      color: var(--accent);
-      border-color: var(--border-strong);
-    }
-
-    .nav-github:hover {
-      background: var(--accent);
-      color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .nav-social-btn svg {
-      width: 14px;
-      height: 14px;
-      fill: currentColor;
-      flex-shrink: 0;
-    }
+    .nav-linkedin { background: var(--linkedin); color: #fff; }
+    .nav-linkedin:hover { background: #005f91; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,119,181,0.28); }
+    .nav-github { background: transparent; color: var(--accent); border-color: var(--border-strong); }
+    .nav-github:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
+    .nav-social-btn svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
 
     /* ── HERO ── */
     #hero {
@@ -150,28 +115,9 @@
 
     .hero-left { animation: fadeUp 1s ease both; }
 
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: var(--highlight);
-    }
-
-    .hero-eyebrow span {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 400;
-    }
+    .hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--highlight); }
+    .hero-eyebrow span { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
 
     .hero-name {
       font-family: 'Cormorant Garamond', serif;
@@ -182,36 +128,13 @@
       margin-bottom: 0.3rem;
       color: var(--accent);
     }
+    .hero-name em { font-style: italic; color: var(--highlight); }
 
-    .hero-name em {
-      font-style: italic;
-      color: var(--highlight);
-    }
+    .hero-role { font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; font-weight: 400; }
 
-    .hero-role {
-      font-size: 0.85rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 2rem;
-      font-weight: 400;
-    }
+    .hero-desc { font-size: 1.05rem; color: #555; max-width: 460px; line-height: 1.85; margin-bottom: 2.8rem; font-weight: 300; }
 
-    .hero-desc {
-      font-size: 1.05rem;
-      color: #555;
-      max-width: 460px;
-      line-height: 1.85;
-      margin-bottom: 2.8rem;
-      font-weight: 300;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 
     .btn {
       padding: 0.8rem 2rem;
@@ -227,154 +150,44 @@
       align-items: center;
       gap: 0.5rem;
     }
+    .btn-primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+    .btn-primary:hover { background: #2d2d4a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,26,46,0.18); }
+    .btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--border-strong); }
+    .btn-outline:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .btn-linkedin { background: var(--linkedin); color: #fff; border: 1px solid var(--linkedin); }
+    .btn-linkedin:hover { background: #005f91; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,119,181,0.22); }
+    .btn svg { width: 15px; height: 15px; fill: currentColor; }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border: 1px solid var(--accent);
-    }
+    .hero-right { display: flex; justify-content: center; align-items: center; animation: fadeUp 1s 0.2s ease both; }
 
-    .btn-primary:hover {
-      background: #2d2d4a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(26,26,46,0.18);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--accent);
-      border: 1px solid var(--border-strong);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .btn-linkedin {
-      background: var(--linkedin);
-      color: #fff;
-      border: 1px solid var(--linkedin);
-    }
-
-    .btn-linkedin:hover {
-      background: #005f91;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,119,181,0.22);
-    }
-
-    .btn svg {
-      width: 15px;
-      height: 15px;
-      fill: currentColor;
-    }
-
-    .hero-right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadeUp 1s 0.2s ease both;
-    }
-
-    .hero-photo-frame {
-      position: relative;
-      width: 380px;
-      height: 460px;
-    }
-
-    .hero-photo-bg {
-      position: absolute;
-      top: 20px; right: -20px;
-      width: 100%; height: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-    }
-
+    .hero-photo-frame { position: relative; width: 380px; height: 460px; }
+    .hero-photo-bg { position: absolute; top: 20px; right: -20px; width: 100%; height: 100%; background: var(--card); border: 1px solid var(--border); }
     .hero-photo {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5rem;
+      position: relative; z-index: 1; width: 100%; height: 100%;
+      background: var(--card); border: 1px solid var(--border);
+      overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 5rem;
     }
-
-    .hero-photo img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
 
     .hero-badge {
-      position: absolute;
-      z-index: 2;
-      bottom: -16px;
-      left: -24px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 1rem 1.4rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      position: absolute; z-index: 2; bottom: -16px; left: -24px;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 1rem 1.4rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
+    .hero-badge label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.2rem; }
+    .hero-badge span { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--accent); }
 
-    .hero-badge label {
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    .hero-badge span {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    /* Social strip below hero */
-    .hero-social-strip {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.4rem;
-      flex-wrap: wrap;
-    }
-
+    .hero-social-strip { display: flex; gap: 1rem; margin-top: 1.4rem; flex-wrap: wrap; }
     .social-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.9rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--border-strong);
-      color: var(--muted);
-      transition: all 0.2s;
-      font-weight: 400;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.35rem 0.9rem; font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none;
+      border: 1px solid var(--border-strong); color: var(--muted);
+      transition: all 0.2s; font-weight: 400;
     }
-
-    .social-pill svg {
-      width: 13px;
-      height: 13px;
-      fill: currentColor;
-    }
-
-    .social-pill:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .social-pill.linkedin:hover {
-      border-color: var(--linkedin);
-      color: var(--linkedin);
-    }
+    .social-pill svg { width: 13px; height: 13px; fill: currentColor; }
+    .social-pill:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .social-pill.linkedin:hover { border-color: var(--linkedin); color: var(--linkedin); }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -382,339 +195,74 @@
     }
 
     /* ── DIVIDER ── */
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .divider { width: 100%; height: 1px; background: var(--border); max-width: 1100px; margin: 0 auto; }
 
     /* ── SECTIONS ── */
-    section {
-      padding: 5.5rem 4rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    section { padding: 5.5rem 4rem; max-width: 1100px; margin: 0 auto; }
 
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .section-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.85rem;
-      color: var(--highlight);
-      letter-spacing: 0.1em;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      color: var(--accent);
-      line-height: 1;
-    }
+    .section-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 3rem; }
+    .section-num { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--highlight); letter-spacing: 0.1em; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 500; letter-spacing: -0.01em; color: var(--accent); line-height: 1; }
 
     /* ── ABOUT ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
+    .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
     .about-image {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: var(--card);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      position: relative;
+      width: 100%; aspect-ratio: 3/4; background: var(--card); border: 1px solid var(--border);
+      overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative;
     }
-
-    .about-image img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      position: absolute;
-    }
-
-    .about-text p {
-      color: #555;
-      line-height: 1.9;
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
-      font-weight: 300;
-    }
-
-    .about-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .meta-item label {
-      display: block;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .meta-item span {
-      font-weight: 400;
-      font-size: 0.92rem;
-      color: var(--accent);
-    }
-
-    .about-connect {
-      margin-top: 2rem;
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
+    .about-image img { width: 100%; height: 100%; object-fit: cover; position: absolute; }
+    .about-text p { color: #555; line-height: 1.9; margin-bottom: 1.2rem; font-size: 1rem; font-weight: 300; }
+    .about-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .meta-item label { display: block; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.35rem; }
+    .meta-item span { font-weight: 400; font-size: 0.92rem; color: var(--accent); }
+    .about-connect { margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
 
     /* ── SKILLS ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1px;
-      border: 1px solid var(--border);
-    }
-
-    .skill-card {
-      background: var(--surface);
-      padding: 2rem 1.8rem;
-      border-right: 1px solid var(--border);
-      transition: background 0.2s;
-    }
-
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; border: 1px solid var(--border); }
+    .skill-card { background: var(--surface); padding: 2rem 1.8rem; border-right: 1px solid var(--border); transition: background 0.2s; }
     .skill-card:last-child { border-right: none; }
     .skill-card:hover { background: var(--card); }
-
     .skill-icon { font-size: 1.4rem; margin-bottom: 1rem; }
-
-    .skill-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent);
-      letter-spacing: 0.02em;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .tag {
-      font-size: 0.7rem;
-      padding: 0.28rem 0.65rem;
-      background: var(--card);
-      color: var(--muted);
-      border: 1px solid var(--border);
-      letter-spacing: 0.05em;
-      transition: all 0.2s;
-    }
-
-    .tag:hover {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
+    .skill-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 1rem; color: var(--accent); letter-spacing: 0.02em; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag { font-size: 0.7rem; padding: 0.28rem 0.65rem; background: var(--card); color: var(--muted); border: 1px solid var(--border); letter-spacing: 0.05em; transition: all 0.2s; }
+    .tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
     /* ── PROJECTS ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.1);
-    }
-
-    .project-thumb {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.8rem;
-      position: relative;
-      overflow: hidden;
-      background: var(--card);
-      border-bottom: 1px solid var(--border);
-    }
-
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .project-card { background: var(--surface); border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+    .project-thumb { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; position: relative; overflow: hidden; background: var(--card); border-bottom: 1px solid var(--border); }
     .thumb-navy { background: linear-gradient(145deg, #eef2f7, #dce6f2); }
     .thumb-sage { background: linear-gradient(145deg, #f0f4f0, #dfeadf); }
     .thumb-blush { background: linear-gradient(145deg, #f7f0ee, #eeddd8); }
-
-    .project-num {
-      position: absolute;
-      top: 1.2rem; left: 1.2rem;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.8rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-    }
-
+    .project-num { position: absolute; top: 1.2rem; left: 1.2rem; font-family: 'Cormorant Garamond', serif; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.1em; }
     .project-body { padding: 1.6rem; }
-
-    .project-body h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      color: var(--accent);
-    }
-
-    .project-body p {
-      color: #777;
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
-      font-weight: 300;
-    }
-
-    .project-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.6rem;
-      border-top: 1px solid var(--border);
-      gap: 0.8rem;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-    }
-
-    .project-link {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: all 0.2s;
-      padding: 0.3rem 0.7rem;
-      border: 1px solid var(--border);
-    }
-
-    .project-link svg {
-      width: 12px;
-      height: 12px;
-      fill: currentColor;
-    }
-
-    .project-link:hover {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .project-link.disabled {
-      color: var(--muted);
-      pointer-events: none;
-      opacity: 0.5;
-    }
+    .project-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.6rem; color: var(--accent); }
+    .project-body p { color: #777; font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.2rem; font-weight: 300; }
+    .project-footer { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.6rem; border-top: 1px solid var(--border); gap: 0.8rem; }
+    .project-links { display: flex; gap: 0.8rem; align-items: center; }
+    .project-link { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent2); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: all 0.2s; padding: 0.3rem 0.7rem; border: 1px solid var(--border); }
+    .project-link svg { width: 12px; height: 12px; fill: currentColor; }
+    .project-link:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
     /* ── EDUCATION ── */
-    .edu-item {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 3rem;
-      padding: 2.5rem 0;
-      border-top: 1px solid var(--border);
-      align-items: start;
-    }
-
+    .edu-item { display: grid; grid-template-columns: 160px 1fr; gap: 3rem; padding: 2.5rem 0; border-top: 1px solid var(--border); align-items: start; }
     .edu-item:last-child { border-bottom: 1px solid var(--border); }
-
-    .edu-year {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-top: 0.2rem;
-    }
-
-    .edu-degree {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-      color: var(--accent);
-    }
-
+    .edu-year { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); padding-top: 0.2rem; }
+    .edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--accent); }
     .edu-school { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.6rem; }
-
-    .edu-desc {
-      color: #777;
-      font-size: 0.88rem;
-      line-height: 1.7;
-      font-weight: 300;
-    }
+    .edu-desc { color: #777; font-size: 0.88rem; line-height: 1.7; font-weight: 300; }
 
     /* ── CERTS ── */
-    .cert-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1px;
-      border: 1px solid var(--border);
-      margin-top: 3rem;
-    }
-
-    .cert-card {
-      background: var(--surface);
-      padding: 1.4rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
-    }
-
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1px; border: 1px solid var(--border); margin-top: 3rem; }
+    .cert-card { background: var(--surface); padding: 1.4rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background 0.2s; }
     .cert-card:hover { background: var(--card); }
-
-    .cert-dot {
-      width: 8px; height: 8px;
-      background: var(--highlight);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
+    .cert-dot { width: 8px; height: 8px; background: var(--highlight); border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
     .cert-info h4 { font-weight: 400; font-size: 0.9rem; margin-bottom: 0.2rem; color: var(--accent); }
     .cert-info span { font-size: 0.7rem; letter-spacing: 0.08em; color: var(--muted); }
+    .cert-link { display: inline-block; margin-top: 0.4rem; font-size: 0.7rem; color: var(--accent2); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+    .cert-link:hover { color: var(--accent); }
 
     /* ── FOOTER ── */
     footer {
@@ -732,29 +280,10 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
     footer span { color: var(--highlight); }
-
-    .footer-social {
-      display: flex;
-      gap: 0.8rem;
-    }
-
-    .footer-social a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      padding: 0.3rem 0.7rem;
-      border: 1px solid var(--border);
-      transition: all 0.2s;
-    }
-
+    .footer-social { display: flex; gap: 0.8rem; }
+    .footer-social a { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; padding: 0.3rem 0.7rem; border: 1px solid var(--border); transition: all 0.2s; }
     .footer-social a svg { width: 12px; height: 12px; fill: currentColor; }
-
     .footer-social a:hover { color: var(--accent); border-color: var(--accent); }
     .footer-social a.linkedin:hover { color: var(--linkedin); border-color: var(--linkedin); }
 
@@ -767,7 +296,6 @@
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .edu-item { grid-template-columns: 1fr; gap: 0.5rem; }
     }
-
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .skills-grid { grid-template-columns: 1fr; }
@@ -860,20 +388,9 @@
         🎓
       </div>
       <div class="about-text">
-        <p>
-          Hi! I'm a Computer Science student with a deep interest in software development,
-          algorithms, and emerging technologies. I enjoy building things that live on the internet
-          and exploring how systems work under the hood.
-        </p>
-        <p>
-          When I'm not coding, I'm participating in hackathons, contributing to open-source projects,
-          or diving into research on AI and machine learning. I believe in writing clean,
-          maintainable code and constantly learning new things.
-        </p>
-        <p>
-          I'm currently seeking internships and collaborative opportunities to apply my skills
-          and grow as a developer.
-        </p>
+        <p>Hi! I'm a Computer Science student with a deep interest in software development, algorithms, and emerging technologies. I enjoy building things that live on the internet and exploring how systems work under the hood.</p>
+        <p>When I'm not coding, I'm participating in hackathons, contributing to open-source projects, or diving into research on AI and machine learning. I believe in writing clean, maintainable code and constantly learning new things.</p>
+        <p>I'm currently seeking internships and collaborative opportunities to apply my skills and grow as a developer.</p>
         <div class="about-meta">
           <div class="meta-item">
             <label>Location</label>
@@ -919,46 +436,35 @@
         <div class="skill-icon">💻</div>
         <h3>Languages</h3>
         <div class="skill-tags">
-          <span class="tag">Java</span>
-          <span class="tag">C</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Python</span>
+          <span class="tag">Java</span><span class="tag">C</span><span class="tag">SQL</span><span class="tag">Python</span>
         </div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🌐</div>
         <h3>Web Development</h3>
         <div class="skill-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
         </div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🛠️</div>
         <h3>Tools &amp; DevOps</h3>
         <div class="skill-tags">
-          <span class="tag">Git / GitHub</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">VS Code</span>
-          <span class="tag">Canva</span>
+          <span class="tag">Git / GitHub</span><span class="tag">MySQL</span><span class="tag">VS Code</span><span class="tag">Canva</span>
         </div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🧠</div>
         <h3>CS Fundamentals</h3>
         <div class="skill-tags">
-          <span class="tag">Data Structures</span>
-          <span class="tag">Algorithms</span>
-          <span class="tag">DBMS</span>
+          <span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">DBMS</span>
         </div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🗄️</div>
         <h3>Databases</h3>
         <div class="skill-tags">
-          <span class="tag">MySQL</span>
-          <span class="tag">PostgreSQL</span>
+          <span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
         </div>
       </div>
     </div>
@@ -985,18 +491,14 @@
         </div>
         <div class="project-footer">
           <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">ML</span>
-            <span class="tag">Flask</span>
+            <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Flask</span>
           </div>
           <div class="project-links">
-  <a href="https://github.com/bhoomi2060-dot/scam-detector" target="_blank" rel="noopener" class="project-link">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-    </svg>
-    GitHub →
-  </a>
-</div>
+            <a href="https://github.com/bhoomi2060-dot/scam-detector" target="_blank" rel="noopener" class="project-link">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub →
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1011,9 +513,7 @@
         </div>
         <div class="project-footer">
           <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">Flask</span>
+            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Flask</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/bhoomi2060-dot/scam-detector" target="_blank" rel="noopener" class="project-link">
@@ -1025,34 +525,26 @@
       </div>
 
       <div class="project-card">
-  <div class="project-thumb thumb-blush">
-    <span class="project-num">003</span>
-    🌾
-  </div>
-  <div class="project-body">
-    <h3>Krishi Sakhi – Agricultural Assistant Platform</h3>
-    <p>
-      Full-stack agricultural assistant platform designed to help farmers with smart crop guidance and real-time recommendations.
-      Built with a responsive React frontend and integrated backend APIs for seamless user experience.
-    </p>
-  </div>
-  <div class="project-footer">
-    <div class="skill-tags">
-      <span class="tag">React</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">Vercel</span>
-    </div>
-    <div class="project-links">
-      <a href="https://krishi-sakhi-frontend.vercel.app" target="_blank" rel="noopener" class="project-link">
-        <svg viewBox="0 0 24 24">
-          <path d="M14 3v2h3.59L7 15.59 8.41 17 19 6.41V10h2V3z"/>
-          <path d="M5 5h5V3H3v7h2z"/>
-        </svg>
-        Live →
-      </a>
-    </div>
-  </div>
-</div>
+        <div class="project-thumb thumb-blush">
+          <span class="project-num">003</span>
+          🌾
+        </div>
+        <div class="project-body">
+          <h3>Krishi Sakhi – Agricultural Assistant Platform</h3>
+          <p>Full-stack agricultural assistant platform designed to help farmers with smart crop guidance and real-time recommendations. Built with a responsive React frontend and integrated backend APIs.</p>
+        </div>
+        <div class="project-footer">
+          <div class="skill-tags">
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://krishi-sakhi-frontend.vercel.app" target="_blank" rel="noopener" class="project-link">
+              <svg viewBox="0 0 24 24"><path d="M14 3v2h3.59L7 15.59 8.41 17 19 6.41V10h2V3z"/><path d="M5 5h5V3H3v7h2z"/></svg>
+              Live →
+            </a>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -1072,1135 +564,7 @@
         <div>
           <div class="edu-degree">B.Tech in Computer Science &amp; Engineering</div>
           <div class="edu-school">Manav Rachna University, Faridabad</div>
-          <div class="edu-desc">
-            CGPA: 7.5 / 10 &nbsp;·&nbsp; Relevant coursework: Data Structures, DBMS,
-            Computer Networks, Machine Learning, Software Engineering.
-          </div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-year">2020 — 2022</div>
-        <div>
-          <div class="edu-degree">Higher Secondary (Class XII)</div>
-          <div class="edu-school">Aggarwal Public School — PCM</div>
-          <div class="edu-desc">Percentage: 80% &nbsp;·&nbsp; CBSE Board</div>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top: 3.5rem;">
-      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem;">Certifications</h3>
-      <div class="cert-grid">
-<div class="cert-card">
-  <div class="cert-dot"></div>
-  <div class="cert-info">
-    <h4>Idea Hack 2025 – 2nd Position</h4>
-    <span>Manav Rachna University</span><br>
-    <a href="https://drive.google.com/file/d/13TjgRjxPVnIJGg5VYPMHtuWcwodTYpJs/view?usp=drive_link" target="_blank" class="cert-link">
-      View Certificate →
-    </a>
-  </div>
-</div>
-
-<div class="cert-card">
-  <div class="cert-dot"></div>
-  <div class="cert-info">
-    <h4>HackMoR 2026 Participation</h4>
-    <span>National Level Hackathon</span><br>
-    <a href="https://drive.google.com/file/d/1d3_BTY8usAZER0SdX2J5Q8j6SSJJwPcB/view?usp=drive_link" target="_blank" class="cert-link">
-      View Certificate →
-    </a>
-  </div>
-</div>
-<div class="cert-card">
-  <div class="cert-dot"></div>
-  <div class="cert-info">
-    <h4>Altair Certificate</h4>
-    <span>Altair Certificate</span><br>
-    <a href="https://drive.google.com/file/d/1izD2ATd1yrPLaVTqsB4a9TwuJ3DgC0Xo/view?usp=drive_link" target="_blank" class="cert-link">
-      View Certificate →
-    </a>
-  </div>
-</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Designed &amp; Built by <span>Bhoomika Sharma</span> &nbsp;·&nbsp; CS Student Portfolio &nbsp;·&nbsp; 2025</p>
-    <div class="footer-social">
-      <a href="https://github.com/bhoomi2060-dot" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/bhoomika-sharma-617179350/" target="_blank" rel="noopener" class="linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-  </footer>
-
-</body>
-</html>
-
-      --card: #f5f5f2;
-      --accent: #1a1a2e;
-      --accent2: #4a6fa5;
-      --highlight: #c8a96e;
-      --text: #1a1a1a;
-      --muted: #6b6b6b;
-      --border: rgba(0,0,0,0.08);
-      --border-strong: rgba(0,0,0,0.15);
-      --linkedin: #0077b5;
-      --github: #1a1a2e;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.4rem 4rem;
-      background: rgba(250,250,248,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.05em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.8rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--accent); }
-
-    /* LinkedIn & GitHub nav buttons */
-    .nav-social {
-      display: flex;
-      gap: 0.7rem;
-      align-items: center;
-      margin-left: 1rem;
-    }
-
-    .nav-social-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.45rem 1rem;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: all 0.22s;
-      border: 1px solid transparent;
-    }
-
-    .nav-linkedin {
-      background: var(--linkedin);
-      color: #fff;
-    }
-
-    .nav-linkedin:hover {
-      background: #005f91;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(0,119,181,0.28);
-    }
-
-    .nav-github {
-      background: transparent;
-      color: var(--accent);
-      border-color: var(--border-strong);
-    }
-
-    .nav-github:hover {
-      background: var(--accent);
-      color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .nav-social-btn svg {
-      width: 14px;
-      height: 14px;
-      fill: currentColor;
-      flex-shrink: 0;
-    }
-
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 7rem 4rem 4rem;
-      gap: 5rem;
-      max-width: 100%;
-      position: relative;
-    }
-
-    .hero-left { animation: fadeUp 1s ease both; }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: var(--highlight);
-    }
-
-    .hero-eyebrow span {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 400;
-    }
-
-    .hero-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3.5rem, 6vw, 5.5rem);
-      font-weight: 500;
-      line-height: 1;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.3rem;
-      color: var(--accent);
-    }
-
-    .hero-name em {
-      font-style: italic;
-      color: var(--highlight);
-    }
-
-    .hero-role {
-      font-size: 0.85rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 2rem;
-      font-weight: 400;
-    }
-
-    .hero-desc {
-      font-size: 1.05rem;
-      color: #555;
-      max-width: 460px;
-      line-height: 1.85;
-      margin-bottom: 2.8rem;
-      font-weight: 300;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .btn {
-      padding: 0.8rem 2rem;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 400;
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.25s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border: 1px solid var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: #2d2d4a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(26,26,46,0.18);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--accent);
-      border: 1px solid var(--border-strong);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .btn-linkedin {
-      background: var(--linkedin);
-      color: #fff;
-      border: 1px solid var(--linkedin);
-    }
-
-    .btn-linkedin:hover {
-      background: #005f91;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,119,181,0.22);
-    }
-
-    .btn svg {
-      width: 15px;
-      height: 15px;
-      fill: currentColor;
-    }
-
-    .hero-right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadeUp 1s 0.2s ease both;
-    }
-
-    .hero-photo-frame {
-      position: relative;
-      width: 380px;
-      height: 460px;
-    }
-
-    .hero-photo-bg {
-      position: absolute;
-      top: 20px; right: -20px;
-      width: 100%; height: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-    }
-
-    .hero-photo {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5rem;
-    }
-
-    .hero-photo img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-badge {
-      position: absolute;
-      z-index: 2;
-      bottom: -16px;
-      left: -24px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 1rem 1.4rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-
-    .hero-badge label {
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    .hero-badge span {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    /* Social strip below hero */
-    .hero-social-strip {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.4rem;
-      flex-wrap: wrap;
-    }
-
-    .social-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.9rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--border-strong);
-      color: var(--muted);
-      transition: all 0.2s;
-      font-weight: 400;
-    }
-
-    .social-pill svg {
-      width: 13px;
-      height: 13px;
-      fill: currentColor;
-    }
-
-    .social-pill:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .social-pill.linkedin:hover {
-      border-color: var(--linkedin);
-      color: var(--linkedin);
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── DIVIDER ── */
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* ── SECTIONS ── */
-    section {
-      padding: 5.5rem 4rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .section-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.85rem;
-      color: var(--highlight);
-      letter-spacing: 0.1em;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      color: var(--accent);
-      line-height: 1;
-    }
-
-    /* ── ABOUT ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .about-image {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: var(--card);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      position: relative;
-    }
-
-    .about-image img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      position: absolute;
-    }
-
-    .about-text p {
-      color: #555;
-      line-height: 1.9;
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
-      font-weight: 300;
-    }
-
-    .about-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .meta-item label {
-      display: block;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .meta-item span {
-      font-weight: 400;
-      font-size: 0.92rem;
-      color: var(--accent);
-    }
-
-    .about-connect {
-      margin-top: 2rem;
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    /* ── SKILLS ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1px;
-      border: 1px solid var(--border);
-    }
-
-    .skill-card {
-      background: var(--surface);
-      padding: 2rem 1.8rem;
-      border-right: 1px solid var(--border);
-      transition: background 0.2s;
-    }
-
-    .skill-card:last-child { border-right: none; }
-    .skill-card:hover { background: var(--card); }
-
-    .skill-icon { font-size: 1.4rem; margin-bottom: 1rem; }
-
-    .skill-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent);
-      letter-spacing: 0.02em;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .tag {
-      font-size: 0.7rem;
-      padding: 0.28rem 0.65rem;
-      background: var(--card);
-      color: var(--muted);
-      border: 1px solid var(--border);
-      letter-spacing: 0.05em;
-      transition: all 0.2s;
-    }
-
-    .tag:hover {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    /* ── PROJECTS ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.1);
-    }
-
-    .project-thumb {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.8rem;
-      position: relative;
-      overflow: hidden;
-      background: var(--card);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .thumb-navy { background: linear-gradient(145deg, #eef2f7, #dce6f2); }
-    .thumb-sage { background: linear-gradient(145deg, #f0f4f0, #dfeadf); }
-    .thumb-blush { background: linear-gradient(145deg, #f7f0ee, #eeddd8); }
-
-    .project-num {
-      position: absolute;
-      top: 1.2rem; left: 1.2rem;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.8rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-    }
-
-    .project-body { padding: 1.6rem; }
-
-    .project-body h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      color: var(--accent);
-    }
-
-    .project-body p {
-      color: #777;
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
-      font-weight: 300;
-    }
-
-    .project-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.6rem;
-      border-top: 1px solid var(--border);
-      gap: 0.8rem;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-    }
-
-    .project-link {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: all 0.2s;
-      padding: 0.3rem 0.7rem;
-      border: 1px solid var(--border);
-    }
-
-    .project-link svg {
-      width: 12px;
-      height: 12px;
-      fill: currentColor;
-    }
-
-    .project-link:hover {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .project-link.disabled {
-      color: var(--muted);
-      pointer-events: none;
-      opacity: 0.5;
-    }
-
-    /* ── EDUCATION ── */
-    .edu-item {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 3rem;
-      padding: 2.5rem 0;
-      border-top: 1px solid var(--border);
-      align-items: start;
-    }
-
-    .edu-item:last-child { border-bottom: 1px solid var(--border); }
-
-    .edu-year {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-top: 0.2rem;
-    }
-
-    .edu-degree {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-      color: var(--accent);
-    }
-
-    .edu-school { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.6rem; }
-
-    .edu-desc {
-      color: #777;
-      font-size: 0.88rem;
-      line-height: 1.7;
-      font-weight: 300;
-    }
-
-    /* ── CERTS ── */
-    .cert-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1px;
-      border: 1px solid var(--border);
-      margin-top: 3rem;
-    }
-
-    .cert-card {
-      background: var(--surface);
-      padding: 1.4rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
-    }
-
-    .cert-card:hover { background: var(--card); }
-
-    .cert-dot {
-      width: 8px; height: 8px;
-      background: var(--highlight);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .cert-info h4 { font-weight: 400; font-size: 0.9rem; margin-bottom: 0.2rem; color: var(--accent); }
-    .cert-info span { font-size: 0.7rem; letter-spacing: 0.08em; color: var(--muted); }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    footer span { color: var(--highlight); }
-
-    .footer-social {
-      display: flex;
-      gap: 0.8rem;
-    }
-
-    .footer-social a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      padding: 0.3rem 0.7rem;
-      border: 1px solid var(--border);
-      transition: all 0.2s;
-    }
-
-    .footer-social a svg { width: 12px; height: 12px; fill: currentColor; }
-
-    .footer-social a:hover { color: var(--accent); border-color: var(--accent); }
-    .footer-social a.linkedin:hover { color: var(--linkedin); border-color: var(--linkedin); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      nav { padding: 1.2rem 2rem; }
-      #hero { grid-template-columns: 1fr; gap: 3rem; padding: 7rem 2rem 3rem; }
-      .hero-photo-frame { width: 280px; height: 340px; margin: 0 auto; }
-      section { padding: 4rem 2rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .edu-item { grid-template-columns: 1fr; gap: 0.5rem; }
-    }
-
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .nav-social .nav-social-btn span { display: none; }
-      footer { flex-direction: column; text-align: center; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo">Bhoomika Sharma</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-    </ul>
-    <div class="nav-social">
-      <a href="https://github.com/bhoomi2060-dot" target="_blank" rel="noopener" class="nav-social-btn nav-github">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        <span>GitHub</span>
-      </a>
-      <a href="https://www.linkedin.com/in/bhoomika-sharma-617179350/" target="_blank" rel="noopener" class="nav-social-btn nav-linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        <span>LinkedIn</span>
-      </a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero" style="max-width:100%;">
-    <div class="hero-left">
-      <div class="hero-eyebrow">
-        <span>CS &amp; IT Student</span>
-      </div>
-      <h1 class="hero-name">Bhoomika<br><em>Sharma</em></h1>
-      <p class="hero-role">Web Developer &amp; ML Enthusiast</p>
-      <p class="hero-desc">
-        Passionate Computer Science student building elegant, efficient solutions.
-        I love turning complex problems into clean, scalable code.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#education" class="btn btn-outline">My Background</a>
-        <a href="https://www.linkedin.com/in/bhoomika-sharma-617179350/" target="_blank" rel="noopener" class="btn btn-linkedin">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-      </div>
-      <div class="hero-social-strip">
-        <a href="https://github.com/bhoomi2060-dot" target="_blank" rel="noopener" class="social-pill">
-          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          github.com/bhoomi2060-dot
-        </a>
-        <a href="https://www.linkedin.com/in/bhoomika-sharma-617179350/" target="_blank" rel="noopener" class="social-pill linkedin">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          linkedin.com/in/bhoomika-sharma
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="hero-photo-frame">
-        <div class="hero-photo-bg"></div>
-        <div class="hero-photo">
-          <img src="photo.jpg.jpeg" alt="Bhoomika Sharma" onerror="this.style.display='none'" />
-          🎓
-        </div>
-        <div class="hero-badge">
-          <label>Status</label>
-          <span>Open to Internships</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2 class="section-title">About Me</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-image">
-        <img src="photo.jpg.jpeg" alt="Bhoomika Sharma" onerror="this.style.display='none'" />
-        🎓
-      </div>
-      <div class="about-text">
-        <p>
-          Hi! I'm a Computer Science student with a deep interest in software development,
-          algorithms, and emerging technologies. I enjoy building things that live on the internet
-          and exploring how systems work under the hood.
-        </p>
-        <p>
-          When I'm not coding, I'm participating in hackathons, contributing to open-source projects,
-          or diving into research on AI and machine learning. I believe in writing clean,
-          maintainable code and constantly learning new things.
-        </p>
-        <p>
-          I'm currently seeking internships and collaborative opportunities to apply my skills
-          and grow as a developer.
-        </p>
-        <div class="about-meta">
-          <div class="meta-item">
-            <label>Location</label>
-            <span>Faridabad, India</span>
-          </div>
-          <div class="meta-item">
-            <label>Year</label>
-            <span>2nd Year</span>
-          </div>
-          <div class="meta-item">
-            <label>University</label>
-            <span>Manav Rachna University</span>
-          </div>
-          <div class="meta-item">
-            <label>Availability</label>
-            <span>Open to Internships</span>
-          </div>
-        </div>
-        <div class="about-connect">
-          <a href="https://www.linkedin.com/in/bhoomika-sharma-617179350/" target="_blank" rel="noopener" class="btn btn-linkedin" style="font-size:0.75rem; padding: 0.65rem 1.4rem;">
-            <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            Connect on LinkedIn
-          </a>
-          <a href="https://github.com/bhoomi2060-dot" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.75rem; padding: 0.65rem 1.4rem;">
-            <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            View GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2 class="section-title">Skills &amp; Technologies</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon">💻</div>
-        <h3>Languages</h3>
-        <div class="skill-tags">
-          <span class="tag">Java</span>
-          <span class="tag">C</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Python</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🌐</div>
-        <h3>Web Development</h3>
-        <div class="skill-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🛠️</div>
-        <h3>Tools &amp; DevOps</h3>
-        <div class="skill-tags">
-          <span class="tag">Git / GitHub</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">VS Code</span>
-          <span class="tag">Canva</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🧠</div>
-        <h3>CS Fundamentals</h3>
-        <div class="skill-tags">
-          <span class="tag">Data Structures</span>
-          <span class="tag">Algorithms</span>
-          <span class="tag">DBMS</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🗄️</div>
-        <h3>Databases</h3>
-        <div class="skill-tags">
-          <span class="tag">MySQL</span>
-          <span class="tag">PostgreSQL</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">Projects</h2>
-    </div>
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-thumb thumb-navy">
-          <span class="project-num">001</span>
-          🛡️
-        </div>
-        <div class="project-body">
-          <h3>Phishing Detection System</h3>
-          <p>Intelligent system to detect and flag phishing URLs and suspicious web content, helping protect users from online threats.</p>
-        </div>
-        <div class="project-footer">
-          <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">ML</span>
-            <span class="tag">Flask</span>
-          </div>
-          <div class="project-links">
-  <a href="https://github.com/bhoomi2060-dot/scam-detector" target="_blank" rel="noopener" class="project-link">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-    </svg>
-    GitHub →
-  </a>
-</div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-thumb thumb-sage">
-          <span class="project-num">002</span>
-          🤖
-        </div>
-        <div class="project-body">
-          <h3>ML Spam Message Detector</h3>
-          <p>Machine learning model to classify spam messages with high accuracy, built with scikit-learn and a Flask API.</p>
-        </div>
-        <div class="project-footer">
-          <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">Flask</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bhoomi2060-dot/scam-detector" target="_blank" rel="noopener" class="project-link">
-              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub →
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-  <div class="project-thumb thumb-blush">
-    <span class="project-num">003</span>
-    🌾
-  </div>
-  <div class="project-body">
-    <h3>Krishi Sakhi – Agricultural Assistant Platform</h3>
-    <p>
-      Full-stack agricultural assistant platform designed to help farmers with smart crop guidance and real-time recommendations.
-      Built with a responsive React frontend and integrated backend APIs for seamless user experience.
-    </p>
-  </div>
-  <div class="project-footer">
-    <div class="skill-tags">
-      <span class="tag">React</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">Vercel</span>
-    </div>
-    <div class="project-links">
-      <a href="https://krishi-sakhi-frontend.vercel.app" target="_blank" rel="noopener" class="project-link">
-        <svg viewBox="0 0 24 24">
-          <path d="M14 3v2h3.59L7 15.59 8.41 17 19 6.41V10h2V3z"/>
-          <path d="M5 5h5V3H3v7h2z"/>
-        </svg>
-        Live →
-      </a>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="section-header">
-      <span class="section-num">04</span>
-      <h2 class="section-title">Education &amp; Certifications</h2>
-    </div>
-
-    <div class="edu-timeline">
-      <div class="edu-item">
-        <div class="edu-year">2022 — Present</div>
-        <div>
-          <div class="edu-degree">B.Tech in Computer Science &amp; Engineering</div>
-          <div class="edu-school">Manav Rachna University, Faridabad</div>
-          <div class="edu-desc">
-            CGPA: 7.5 / 10 &nbsp;·&nbsp; Relevant coursework: Data Structures, DBMS,
-            Computer Networks, Machine Learning, Software Engineering.
-          </div>
+          <div class="edu-desc">CGPA: 7.5 / 10 &nbsp;·&nbsp; Relevant coursework: Data Structures, DBMS, Computer Networks, Machine Learning, Software Engineering.</div>
         </div>
       </div>
       <div class="edu-item">
@@ -2219,29 +583,25 @@
         <div class="cert-card">
           <div class="cert-dot"></div>
           <div class="cert-info">
-            <h4>AWS Cloud Practitioner</h4>
-            <span>Amazon Web Services · 2024</span>
+            <h4>Idea Hack 2025 – 2nd Position</h4>
+            <span>Manav Rachna University</span><br>
+            <a href="https://drive.google.com/file/d/13TjgRjxPVnIJGg5VYPMHtuWcwodTYpJs/view?usp=drive_link" target="_blank" class="cert-link">View Certificate →</a>
           </div>
         </div>
         <div class="cert-card">
           <div class="cert-dot"></div>
           <div class="cert-info">
-            <h4>Python for Data Science</h4>
-            <span>Coursera / IBM · 2023</span>
+            <h4>HackMoR 2026 Participation</h4>
+            <span>National Level Hackathon</span><br>
+            <a href="https://drive.google.com/file/d/1d3_BTY8usAZER0SdX2J5Q8j6SSJJwPcB/view?usp=drive_link" target="_blank" class="cert-link">View Certificate →</a>
           </div>
         </div>
         <div class="cert-card">
           <div class="cert-dot"></div>
           <div class="cert-info">
-            <h4>Web Development Bootcamp</h4>
-            <span>Udemy · 2023</span>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-dot"></div>
-          <div class="cert-info">
-            <h4>DSA with Java</h4>
-            <span>GeeksforGeeks · 2023</span>
+            <h4>Altair Certificate</h4>
+            <span>Altair</span><br>
+            <a href="https://drive.google.com/file/d/1izD2ATd1yrPLaVTqsB4a9TwuJ3DgC0Xo/view?usp=drive_link" target="_blank" class="cert-link">View Certificate →</a>
           </div>
         </div>
       </div>
